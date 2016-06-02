@@ -6,8 +6,7 @@ OBJ=src/MaxValue.o
 	$(AS) -o $@ $<
 
 maxvalue: $(OBJ)
-	mkdir bin/
-	$(LINKER) -o bin/$@ $^
+	$(LINKER) -o $@ $^
 
 .PHONY: clean
 
