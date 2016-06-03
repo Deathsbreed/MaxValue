@@ -1,12 +1,13 @@
 AS=as
 LINKER=ld
-OBJ=src/MaxValue.o
+OBJ=src/maxvalue.o
 
 %.o: %.asm
 	$(AS) -o $@ $<
 
 maxvalue: $(OBJ)
-	$(LINKER) -o $@ $^
+	mkdir -p bin
+	$(LINKER) -o bin/$@ $^
 
 .PHONY: clean
 
